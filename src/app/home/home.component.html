@@ -1,0 +1,29 @@
+<div class="home--body">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Please search by anything</mat-label>
+      <input matInput name="something"[(ngModel)]="searchText">
+    </mat-form-field>
+  </form>
+  
+  <ng-container *ngIf="allResturants$ | async as allResturants">
+    <ng-container *ngFor="let resturant of allResturants | filter:searchText">
+      <mat-card class="example-card" (click)="openResturant(resturant)">
+        <img mat-card-image src="{{resturant.Image}}" alt="{{resturant.Variety}}">
+        <mat-card-content>
+          <p>
+            {{resturant.Brand}}, {{resturant.Variety}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>  
+  </ng-container>
+
+
+
+</div>
+
+
+
+
+

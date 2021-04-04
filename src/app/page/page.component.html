@@ -1,0 +1,34 @@
+
+<div class="page--body">
+  <ng-container *ngIf="resturant$ | async as resturant">
+
+    <img src="{{resturant.Image}}" alt="{{resturant.Variety}}">
+    <mat-grid-list cols="2" gutterSize="10px" rowHeight="10:1">
+      <mat-grid-tile>Brand :</mat-grid-tile>
+      <mat-grid-tile>{{resturant.Brand}}</mat-grid-tile>
+
+      <mat-grid-tile>Variety :</mat-grid-tile>
+      <mat-grid-tile>{{resturant.Variety}}</mat-grid-tile>
+
+      <mat-grid-tile>Style :</mat-grid-tile>
+      <mat-grid-tile>{{resturant.Style}}</mat-grid-tile>
+
+      <mat-grid-tile>Country :</mat-grid-tile>
+      <mat-grid-tile>{{resturant.Country}}</mat-grid-tile>
+
+      <mat-grid-tile>Stars :</mat-grid-tile>
+      <mat-grid-tile>{{resturant.Stars}}</mat-grid-tile>
+
+      <mat-grid-tile>Top Ten :</mat-grid-tile>
+      <mat-grid-tile>{{resturant['Top Ten']}}</mat-grid-tile>
+
+    </mat-grid-list>
+
+
+  </ng-container>
+
+
+  
+
+</div>
+
